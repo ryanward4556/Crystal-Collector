@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Guess Game</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Game layout -->
+    <div class="container-fluid mt-4">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Crystal Collector Game</h1>
+            <p class="lead">Can you math?</p>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-sm-8 justify-content-center p-3 mb-2 mt-2 bg-info text-white" id="rules-text">
+                <p>Rules</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 p-3 mt-2 mb-2 mr-1 bg-primary text-white" id="goal-score-text">
+                    <p>Goal Score</p>
+                </div>
+                <div class="col-sm-3  p-3 mt-2 mb-2 ml-1 bg-primary text-white" id="wins-losses-text">
+                    <p>Wins/Losses</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="crystal-one">crystal 1</div>
+                <div class="col-sm-3" id="crystal-one">crystal 2</div>
+                <div class="col-sm-3" id="crystal-one">crystal 3</div>
+                <div class="col-sm-3" id="crystal-one">crystal 4</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 justify-content-center p-3 mb-1 mt-2 bg-primary text-white">
+                    <p>Your total score is: </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 justify-content-center p-3 mb-2 mt-1 bg-primary text-white"" id=" user-score">
+                    <p>Player Score</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+    <!-- Javascrit reference to game.js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
