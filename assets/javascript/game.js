@@ -53,7 +53,6 @@ $(document).ready(function () {
     var winChecker = function () {
         if (userScore === targetScore) {
             targetComplete = true;
-            console.log("you win");
         }
     }
 
@@ -64,7 +63,7 @@ $(document).ready(function () {
         winChecker();
         if (targetComplete === true) {
             wins++;
-            console.log("wins: " + wins);
+            $("#wins-losses-text").append("'Wins: ' + wins");
             resetGame()
             generateCrystals();
         } else if (userScore > targetScore) {

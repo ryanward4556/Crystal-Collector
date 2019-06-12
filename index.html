@@ -17,19 +17,21 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
 
     <!-- Game layout -->
-    <div class="container-fluid mt-4">
-        <div class="jumbotron text-center">
+    <div class="container mt-4">
+        <div class="jumbotron text-center bg-dark">
             <h1 class="display-4 p-3 mb-2 bg-success text-white">Crystal Collector Game</h1>
             <p class="lead p-1 mb-2 bg-warning text-dark">Can you math?</p>
             <hr class="my-4">
             <div class="row">
                 <div class="col-sm-8 justify-content-center p-3 mb-2 mt-2 bg-info text-white" id="rules-text">
-                <p>Rules</p>
+                    <p>Rules</p>
                 </div>
             </div>
             <div class="row">
@@ -37,14 +39,37 @@
                     <p>Target Score</p>
                 </div>
                 <div class="col-sm-3  p-3 mt-2 mb-2 ml-1 bg-primary text-white" id="wins-losses-text">
-                    <p>Wins/Losses</p>
+                    <p>Wins: </p>
+                    <p>Losses: </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3" id="crystal-one">crystal 1</div>
-                <div class="col-sm-3" id="crystal-two">crystal 2</div>
-                <div class="col-sm-3" id="crystal-three">crystal 3</div>
-                <div class="col-sm-3" id="crystal-four">crystal 4</div>
+                <div class="col-sm-3" id="crystal-one">
+                    <div class="card" style="width: 6rem">
+                        <img class="card-img-top" src="assets/images/image.png" alt="Crystal One">
+                    </div>
+                </div>
+                <div class="col-sm-3" id="crystal-two">
+                    <div class="col-sm-3" id="crystal-one">
+                        <div class="card" style="width: 6rem">
+                            <img class="card-img-top" src="assets/images/image-2.png" alt="Crystal One">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3" id="crystal-three">
+                    <div class="col-sm-3" id="crystal-one">
+                        <div class="card" style="width: 6rem">
+                            <img class="card-img-top" src="assets/images/image-3.png" alt="Crystal One">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3" id="crystal-four">
+                    <div class="col-sm-3" id="crystal-one">
+                        <div class="card" style="width: 6rem">
+                            <img class="card-img-top" src="assets/images/image-4.png" alt="Crystal One">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-4 justify-content-center p-3 mb-1 mt-2 bg-primary text-white">
