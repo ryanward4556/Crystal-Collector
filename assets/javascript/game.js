@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var userScore = 0;
     var targetScore = 0;
-    var targetComplete = false;
+    // var targetComplete = false;
     var wins = 0;
     var losses = 0;
     var crystalOne = 0;
@@ -21,8 +21,7 @@ $(document).ready(function () {
 
     //  Generates random targetScore between 19-120
 
-    targetScore = Math.floor((Math.random() * 102) + 19);
-    console.log("target score: " + targetScore);
+
 
     //  Generates crystal amounts, each to random
 
@@ -38,6 +37,35 @@ $(document).ready(function () {
     console.log("crystal three: " + crystalThree);
     console.log("crystal four: " + crystalFour);
 
+    var startGame = function() {
+        resetGame();
+        generateCrystals();
+        displayScores();
+    }
+
+    var resetGame = function () {
+        userScore = 0;
+        targetScore = Math.floor((Math.random() * 102) + 19);
+    }
+
+    var displayScores = function () {
+        $("#wins-losses-text").html("Wins: " + wins + " Losses: " + losses);
+        $("#target-score-text").html("Target Score: " + targetScore);
+        $("#user-score-text").html("Your score is: " + userScore);
+    }
+
+    var winChecker = function () {
+        if (userScore === targetScore) {
+            wins ++;
+            startGame();
+        } else if (userScore > targetScore) {
+            losses++;
+            startGame();
+        }
+    }
+
+    startGame();
+
     /*
     *   ----------------------------------------------------------------------------
     *   When user clicks...
@@ -50,85 +78,34 @@ $(document).ready(function () {
 
     //  Checks if target was exactly hit (userGuess === targetScore), returns 'true' or 'false'
 
-    var winChecker = function () {
-        if (userScore === targetScore) {
-            targetComplete = true;
-        }
-    }
+
 
 
     $("#crystal-one").on("click", function () {
         userScore += crystalOne;
-        console.log(userScore);
         winChecker();
-        if (targetComplete === true) {
-            wins++;
-            $("#wins-losses-text").append("'Wins: ' + wins");
-            resetGame()
-            generateCrystals();
-        } else if (userScore > targetScore) {
-            losses++;
-            console.log("losses: " + losses);
-            resetGame()
-            generateCrystals();
-        }
+        displayScores();
     });
 
     $("#crystal-two").on("click", function () {
-        userScore += crystalTwo;
-        console.log(userScore);
+        userScore += crystalOne;
         winChecker();
-        if (targetComplete === true) {
-            wins++;
-            console.log("wins: " + wins);
-            resetGame()
-            generateCrystals();
-        } else if (userScore > targetScore) {
-            losses++;
-            console.log("losses: " + losses);
-            resetGame()
-            generateCrystals();
-        }
+        displayScores();
     });
 
     $("#crystal-three").on("click", function () {
-        userScore += crystalThree;
-        console.log(userScore);
+        userScore += crystalOne;
         winChecker();
-        if (targetComplete === true) {
-            wins++;
-            console.log("wins: " + wins);
-            resetGame()
-            generateCrystals();
-        } else if (userScore > targetScore) {
-            losses++;
-            console.log("losses: " + losses);
-            resetGame()
-            generateCrystals();
-        }
+        displayScores();
     });
 
     $("#crystal-four").on("click", function () {
-        userScore += crystalFour;
-        console.log(userScore);
+        userScore += crystalOne;
         winChecker();
-        if (targetComplete === true) {
-            wins++;
-            console.log("wins: " + wins);
-            resetGame()
-            generateCrystals();
-        } else if (userScore > targetScore) {
-            losses++;
-            console.log("losses: " + losses);
-            resetGame()
-            generateCrystals();
-        }
+        displayScores();
     });
 
-    var resetGame = function () {
-        targetComplete = false;
-        userScore = 0;
-    }
+
 
 
     console.log("score: " + userScore)
