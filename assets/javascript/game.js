@@ -51,7 +51,7 @@ $(document).ready(function () {
     var displayScores = function () {
         $("#wins-losses-text").html("Wins: " + wins + " Losses: " + losses);
         $("#target-score-text").html("Target Score: " + targetScore);
-        $("#user-score-text").html("Your score is: " + userScore);
+        $("#user-score-text").html(userScore);
     }
 
     var winChecker = function () {
