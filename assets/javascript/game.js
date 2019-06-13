@@ -39,7 +39,8 @@ $(document).ready(function () {
 
     //  Displays text for target score, user score, and wins/losses
     var displayScores = function () {
-        $("#wins-losses-text").html("Wins: " + wins + " Losses: " + losses);
+        $("#wins-text").html("Wins: " + wins);
+        $("#losses-text").html(" Losses: " + losses);
         $("#target-score-text").html("Target Score: " + targetScore);
         $("#user-score-text").html(userScore);
     }

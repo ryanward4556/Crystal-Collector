@@ -1,8 +1,9 @@
 body {
     background-image: url(../images/light-grey-terrazzo.png);
+    font-family: 'Coiny', cursive;
 }
 
 img {
     height: 100px;
-    /* width: 200px; */
 }
+
