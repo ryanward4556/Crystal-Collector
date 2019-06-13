@@ -1,10 +1,14 @@
+/*
+*   ----------------------------------------------------------------------------------------------------------------------
+*   When page loads (document.ready)...
+*   ----------------------------------------------------------------------------------------------------------------------
+*/
+
 $(document).ready(function () {
 
     //  Global Variables
-
     var userScore = 0;
     var targetScore = 0;
-    // var targetComplete = false;
     var wins = 0;
     var losses = 0;
     var crystalOne = 0;
@@ -12,51 +16,38 @@ $(document).ready(function () {
     var crystalThree = 0;
     var crystalFour = 0;
 
-
-    /*
-    *   ----------------------------------------------------------------------------
-    *   When page loads (document.ready)...
-    *   ----------------------------------------------------------------------------
-    */
-
-    //  Generates random targetScore between 19-120
-
-
-
     //  Generates crystal amounts, each to random
-
     var generateCrystals = function () {
         crystalOne = Math.floor((Math.random() * 12) + 1);
         crystalTwo = Math.floor((Math.random() * 12) + 1);
         crystalThree = Math.floor((Math.random() * 12) + 1);
         crystalFour = Math.floor((Math.random() * 12) + 1);
     }
-    generateCrystals();
-    console.log("crystal one: " + crystalOne);
-    console.log("crystal two: " + crystalTwo);
-    console.log("crystal three: " + crystalThree);
-    console.log("crystal four: " + crystalFour);
 
-    var startGame = function() {
+    //  Starts game, is called at initially when page loads and after a win or loss
+    var startGame = function () {
         resetGame();
         generateCrystals();
         displayScores();
     }
 
+    //  Resets user score and target score
     var resetGame = function () {
         userScore = 0;
         targetScore = Math.floor((Math.random() * 102) + 19);
     }
 
+    //  Displays text for target score, user score, and wins/losses
     var displayScores = function () {
         $("#wins-losses-text").html("Wins: " + wins + " Losses: " + losses);
         $("#target-score-text").html("Target Score: " + targetScore);
         $("#user-score-text").html(userScore);
     }
 
+    //  Checks if target was exactly hit (userGuess === targetScore) and adds to wins or losses accordingly
     var winChecker = function () {
         if (userScore === targetScore) {
-            wins ++;
+            wins++;
             startGame();
         } else if (userScore > targetScore) {
             losses++;
@@ -64,23 +55,14 @@ $(document).ready(function () {
         }
     }
 
-    startGame();
-
     /*
-    *   ----------------------------------------------------------------------------
-    *   When user clicks...
-    *   ----------------------------------------------------------------------------
+    *   ----------------------------------------------------------------------------------------------------------------------
+    *   When user clicks on a crystal, add to userscore and call winChecker, then displayScores
+    *   ----------------------------------------------------------------------------------------------------------------------
     */
 
-    //  Listen for user to click on one of the crystals
-
-    //  Increase userScore by crystal clicked
-
-    //  Checks if target was exactly hit (userGuess === targetScore), returns 'true' or 'false'
-
-
-
-
+    //  Function for each crystal, listens for user to click, adds that crystal's amount to user score, checks for a win and
+    //  updates text to be displayed
     $("#crystal-one").on("click", function () {
         userScore += crystalOne;
         winChecker();
@@ -88,39 +70,24 @@ $(document).ready(function () {
     });
 
     $("#crystal-two").on("click", function () {
-        userScore += crystalOne;
+        userScore += crystalTwo;
         winChecker();
         displayScores();
     });
 
     $("#crystal-three").on("click", function () {
-        userScore += crystalOne;
+        userScore += crystalThree;
         winChecker();
         displayScores();
     });
 
     $("#crystal-four").on("click", function () {
-        userScore += crystalOne;
+        userScore += crystalFour;
         winChecker();
         displayScores();
     });
 
-
-
-
-    console.log("score: " + userScore)
-    console.log("wins: " + wins);
-    console.log("losses: " + losses);
-
-
-
-    //  If statement: 
-    //  if userScore === target Score, "You win!", call restart game function
-    //  if userScore > targetScore, "You lose :(", call restart game function
-    //  if userScore < targetScore, wait for another crystal to be clicked
-
-
-
-
+    //  Initializes the game
+    startGame();
 });
 
