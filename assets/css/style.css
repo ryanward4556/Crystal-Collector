@@ -3,7 +3,22 @@ body {
     font-family: 'Coiny', cursive;
 }
 
-img {
-    height: 100px;
+#header-title {
+    background-color: #68c821;
 }
 
+#header-subtitle {
+    background-color: #f1c031;
+}
+
+#rules-text {
+    background-color: #8f348c;
+}
+
+img {
+    height: 200px;
+}
+
+#target-score-text, #wins-text, #losses-text, #score-text {
+    font-size: 35px;
+}

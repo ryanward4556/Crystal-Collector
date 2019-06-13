@@ -28,11 +28,11 @@
     <!-- Game layout -->
     <div class="container mt-4">
         <div class="jumbotron text-center bg-dark">
-            <h1 class="display-4 p-3 mb-2 bg-success text-white">Crystal Collector Game</h1>
-            <p class="lead p-1 mb-2 bg-warning text-dark">How's your quick maths?</p>
+            <h1 class="display-4 p-3 mb-2 text-white" id="header-title">Crystal Collector Game</h1>
+            <p class="lead p-1 mb-2 text-white" id="header-subtitle">How's your quick maths?</p>
             <hr class="my-4">
             <div class="row">
-                <div class="col-sm-12 justify-content-center p-3 mb-2 mt-2 bg-info text-white">
+                <div class="col-sm-12 justify-content-center p-3 mb-2 mt-2 text-white" id="rules-text">
                     <p>You will be given a random number at the start of the game.</p>
                     <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points
                         to your total score.</p>
@@ -46,42 +46,41 @@
                 <div class="col-sm-6 p-5 mt-2 mb-3 mr-1 bg-primary text-white align-bottom">
                     <h4 id="target-score-text"></h4>
                 </div>
-                <div class="col-sm-3  p-3 mt-2 mb-3 ml-1 bg-primary text-white">
+                <div class="col-sm-3  p-5 mt-2 mb-3 ml-1 bg-primary text-white">
                     <h4 id="wins-text"></h4>
                     <h4 id="losses-text"></h4>
                 </div>
-
             </div>
             <div class="row">
                 <div class="col-sm-3" id="crystal-one">
-                    <div class="card" style="width: 6rem">
+                    <div class="card border-dark" style="width: 12rem">
                         <img class="card-img-top" src="assets/images/image.png" alt="Crystal One">
                     </div>
                 </div>
                 <div class="col-sm-3" id="crystal-two">
-                    <div class="col-sm-3" id="crystal-one">
-                        <div class="card" style="width: 6rem">
-                            <img class="card-img-top" src="assets/images/image-2.png" alt="Crystal One">
+                    <div class="col-sm-3" id="crystal-two">
+                        <div class="card border-dark" style="width: 12rem">
+                            <img class="card-img-top" src="assets/images/image-2.png" alt="Crystal Two">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3" id="crystal-three">
-                    <div class="col-sm-3" id="crystal-one">
-                        <div class="card" style="width: 6rem">
-                            <img class="card-img-top" src="assets/images/image-3.png" alt="Crystal One">
+                    <div class="col-sm-3" id="crystal-three">
+                        <div class="card border-dark" style="width: 12rem">
+                            <img class="card-img-top" src="assets/images/image-3.png" alt="Crystal Three">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3" id="crystal-four">
-                    <div class="col-sm-3" id="crystal-one">
-                        <div class="card" style="width: 6rem">
-                            <img class="card-img-top" src="assets/images/image-4.png" alt="Crystal One">
+                    <div class="col-sm-3" id="crystal-four">
+                        <div class="card border-dark" style="width: 12rem">
+                            <img class="card-img-top" src="assets/images/image-4.png" alt="Crystal Four">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 justify-content-center p-3 mb-2 mt-3 bg-primary text-white">
+                <div class="col-sm-4 justify-content-center p-3 mb-2 mt-3 bg-primary text-white" id="score-text">
                     <h4>Your Score is: </h4>
                     <h3 id="user-score-text"></h3>
                 </div>
