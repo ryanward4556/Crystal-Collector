@@ -1,4 +1,4 @@
-# Project Title
+# Crystal Collector Description
 
 This project is for Week 4 HW for Penn LPS Coding Bootcamp, which focused on implementing JQuery. 
 
@@ -8,8 +8,8 @@ The goal of this Crystal Collector Game is for the user to click on the crystals
 
 * HTML
 * CSS
-* JavaScript
+* JavaScript/jQuery
 
-## Authors
+## Contributors
 
-* **Ryan Ward**  - *Initial work* - [PurpleBooth](https://github.com/ryanward4556)
+Ryan Ward
